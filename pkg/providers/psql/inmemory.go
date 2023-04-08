@@ -2,8 +2,9 @@ package psql
 
 import (
 	"context"
-	"get-time/model"
 	"log"
+
+	"get-time/pkg/model"
 )
 
 // SaveTimeInMemory implements the providers.TimeStorageInmemory interface.

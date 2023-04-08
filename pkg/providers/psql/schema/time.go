@@ -1,10 +1,11 @@
 package schema
 
 import (
-	"get-time/model"
+	"time"
+
+	"get-time/pkg/model"
 	"github.com/google/uuid"
 	"github.com/uptrace/bun"
-	"time"
 )
 
 type TimeDb struct {

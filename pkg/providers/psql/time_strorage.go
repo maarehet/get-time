@@ -3,9 +3,10 @@ package psql
 import (
 	"context"
 	"fmt"
-	"get-time/model"
-	"get-time/providers"
-	"get-time/providers/psql/schema"
+
+	"get-time/pkg/model"
+	"get-time/pkg/providers"
+	"get-time/pkg/providers/psql/schema"
 )
 
 var _ providers.TimeStoragePsql = (*Storage)(nil)

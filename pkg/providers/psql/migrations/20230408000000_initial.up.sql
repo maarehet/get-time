@@ -4,7 +4,7 @@ create extension if not exists "uuid-ossp";
 create table if not exists time_table
 (
     id         uuid         default uuid_generate_v4(),
-    created_at timestamp    not null default now(),
+    created_at timestamptz  not null default now(),
 
     unique (id)
 );

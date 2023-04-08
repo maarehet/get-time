@@ -2,7 +2,8 @@ package providers
 
 import (
 	"context"
-	"get-time/model"
+
+	"get-time/pkg/model"
 )
 
 type (

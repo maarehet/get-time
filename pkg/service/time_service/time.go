@@ -2,12 +2,13 @@ package time_service
 
 import (
 	"context"
-	"get-time/model"
-	"get-time/providers"
-	"get-time/service"
+
+	"get-time/pkg/model"
+	"get-time/pkg/providers"
+	"get-time/pkg/service"
 )
 
-var _ service.CheckerI = (*TimeService)(nil)
+var _ service.Checker = (*TimeService)(nil)
 
 type TimeService struct {
 	db       providers.TimeStoragePsql
@@ -23,7 +24,7 @@ func (c *TimeService) GetTime(ctx context.Context) (string, error) {
 	}
 	timeNow, err = c.inmemory.SaveTimeInMemory(ctx, time)
 	if err != nil {
-		return "", err
+		return "", err // TODO wrap
 	}
 
 	return timeNow, nil

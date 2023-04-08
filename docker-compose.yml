@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    image: postgres:14.2-alpine
+    container_name: get_time_pg
+    environment:
+      POSTGRES_DB: diplom
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5433:5432"
+    volumes:
+      - get_time_volume:/var/lib/postgresql/data
+
+volumes:
+  get_time_volume:
