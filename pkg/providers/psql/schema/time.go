@@ -1,7 +1,7 @@
 package schema
 
 import (
-	"get-time/model"
+	"get-time/pkg/model"
 	"github.com/google/uuid"
 	"github.com/uptrace/bun"
 	"time"

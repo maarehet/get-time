@@ -2,6 +2,6 @@ package service
 
 import "context"
 
-type CheckerI interface {
+type Checker interface {
 	GetTime(ctx context.Context) (string, error)
 }
